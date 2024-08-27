@@ -2,6 +2,7 @@
 import NavBar from "../components/NavBar";
 import { getImage } from "astro:assets";
 import bioBackground from "../assets/bg.png";
+import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -42,6 +43,7 @@ const bgImageSet = `image-set(${imageSet})`;
       href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
       rel="stylesheet"
     />
+    <ViewTransitions />
   </head>
   <body style=`background-image: ${bgImageSet};`>
     <main>
