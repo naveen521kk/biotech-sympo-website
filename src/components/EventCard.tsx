@@ -31,7 +31,7 @@ const EventCard = ({
               <Dialog.Title className="text-xl font-semibold leading-none tracking-wider text-white">
                 {title}
               </Dialog.Title>
-              <div className="text-[1.25rem] text-white max-h-[60vh] overflow-scroll w-full">{description}</div>
+              <div className="text-[1.25rem] text-white max-h-[60vh] overflow-auto w-full">{description}</div>
               <Dialog.Close className="text-white absolute right-4 top-4 rounded-sm opacity-70 ring-offset-[#b94e09] transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-orange-300 data-[state=open]:text-white">
                 <Cross2Icon className="h-4 w-4" />
                 <span className="sr-only">Close</span>
