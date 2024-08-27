@@ -20,25 +20,25 @@ const renderer = ({
       <>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            0
+            00
           </div>
           <div className="mt-2 text-xl font-bold text-white">Days</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            0
+            00
           </div>
           <div className="mt-2 text-xl font-bold text-white">Hours</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            0
+            00
           </div>
           <div className="mt-2 text-xl font-bold text-white">Minutes</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            0
+            00
           </div>
           <div className="mt-2 text-xl font-bold text-white">Seconds</div>
         </div>
@@ -50,25 +50,25 @@ const renderer = ({
       <>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            {days}
+            {days.toString().padStart(2, "0")}
           </div>
           <div className="mt-2 text-xl font-bold text-white">Days</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            {hours}
+            {hours.toString().padStart(2, "0")}
           </div>
           <div className="mt-2 text-xl font-bold text-white">Hours</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            {minutes}
+            {minutes.toString().padStart(2, "0")}
           </div>
           <div className="mt-2 text-xl font-bold text-white">Minutes</div>
         </div>
         <div className="flex flex-col items-center mx-2">
           <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
-            {seconds}
+            {seconds.toString().padStart(2, "0")}
           </div>
           <div className="mt-2 text-xl font-bold text-white">Seconds</div>
         </div>
