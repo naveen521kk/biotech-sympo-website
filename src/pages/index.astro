@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
 import EventList from "../components/EventList";
+import collegeBanner from "../assets/college-banner.svg";
 ---
 
 <Layout title="BIOVIZTA'2K24">
@@ -11,9 +12,8 @@ import EventList from "../components/EventList";
       <dialog class="backdrop:bg-black/60"></dialog><div
         class="w-full md:w-6/12"
       >
-        <img
-          src={"/college-banner.svg"}
-          height="500"
+        <Image
+          src={collegeBanner}
           class="w-full object-cover py-4 md:py-10"
           alt="St. Joseph's College of Engineering"
         />
