@@ -5,17 +5,16 @@ import type React from "react";
 const EventCard = ({
   title,
   description,
-  imgSrc,
+  imgComponent,
 }: {
   title: string;
-
-  description: React.ReactNode;
-  imgSrc: string;
+  description?: React.ReactNode;
+  imgComponent? : React.ReactNode;
 }) => (
   <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
     <div className="flex flex-col gap-2 p-4 bg-black bg-opacity-80 rounded-md border-2 border-stone-500 ">
       <div className="">
-        <img src={imgSrc} className="rounded-lg" alt={`BIOVIZTA'2K24 ${title} event logo`}/>
+        {imgComponent}
         <div className="text-sm mt-4 font-bold text-white text-center md:text-xl">
           {title}
         </div>
@@ -31,7 +30,9 @@ const EventCard = ({
               <Dialog.Title className="text-xl text-center font-semibold leading-none tracking-wider text-white">
                 {title}
               </Dialog.Title>
-              <div className="text-[1.25rem] text-white max-h-[60vh] overflow-auto w-full">{description}</div>
+              <div className="text-[1.25rem] text-white max-h-[60vh] overflow-auto w-full">
+                {description}
+              </div>
               <Dialog.Close className="text-white absolute right-4 top-4 rounded-sm opacity-70 ring-offset-[#b94e09] transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-orange-300 data-[state=open]:text-white">
                 <Cross2Icon className="h-4 w-4" />
                 <span className="sr-only">Close</span>

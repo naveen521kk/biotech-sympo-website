@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
-import EventList from "../components/EventList";
+import EventList from "../components/EventList.astro";
 import collegeBanner from "../assets/college-banner.svg";
 ---
 
@@ -46,7 +46,7 @@ import collegeBanner from "../assets/college-banner.svg";
       >
         Events
       </div>
-      <EventList client:load />
+      <EventList />
     </div>
   </div>
 </Layout>
