@@ -1,11 +1,27 @@
 ---
-import NavBar from '../components/NavBar';
+import NavBar from "../components/NavBar";
+import { getImage } from "astro:assets";
+import bioBackground from "../assets/bg.png";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const optimizedBackground = await getImage({
+  src: bioBackground,
+  format: "webp",
+  densities: [1, 2],
+  quality: "high",
+});
+const imageSet = optimizedBackground.srcSet.attribute
+  .split(", ")
+  .map((str) => {
+    const [url, dpi] = str.split(" ");
+    return `url("${url}") ${dpi}`;
+  })
+  .join(", ");
+const bgImageSet = `image-set(${imageSet})`;
 ---
 
 <!doctype html>
@@ -27,12 +43,12 @@ const { title } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body style=`background-image: ${bgImageSet};`>
     <main>
       <div
         class="relative z-10 transition-opacity ease-in duration-700 opacity-100"
       >
-        <NavBar client:load/>
+        <NavBar client:load />
         <slot />
       </div>
     </main>
@@ -42,7 +58,10 @@ const { title } = Astro.props;
 <style is:global>
   body {
     background-color: black;
-    background: url("/bg.png") no-repeat center center fixed;
+    /* background: url("/bg.png") no-repeat center center fixed; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
   }
 </style>
