@@ -6,15 +6,16 @@ export default {
       fontFamily: {
         sans: ['"Jersey 10"', "sans-serif"],
       },
-	  fontSize: {
-		// lg should be 2rem - arrange the rest of the sizes accordingly
-		"lg": "2rem",
-		"xl": "2.25rem",
-		"2xl": "2.5rem",
-		"3xl": "2.75rem",
-		"4xl": "3rem",
-	  }
+      fontSize: {
+        // lg should be 2rem - arrange the rest of the sizes accordingly
+        base: "1.5rem",
+        lg: "2rem",
+        xl: "2.25rem",
+        "2xl": "2.5rem",
+        "3xl": "2.75rem",
+        "4xl": "3rem",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

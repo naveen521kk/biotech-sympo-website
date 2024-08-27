@@ -2,104 +2,52 @@
 import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
+import EventList from "../components/EventList";
 ---
 
 <Layout title="BIOVIZTA'2K24">
-  <main>
-    <div
-      class="relative z-10 transition-opacity ease-in duration-700 opacity-100"
-    >
-      <div
-        class="bg-black bg-opacity-50 md:bg-transparent w-screen flex flex-row justify-center p-5 h-[15%]"
+  <div class="">
+    <div class="flex flex-col items-center">
+      <dialog class="backdrop:bg-black/60"></dialog><div
+        class="w-full md:w-6/12"
       >
-        <div
-          class="w-[80vw] flex flex-row justify-between items-center max-h-[60px]"
+        <img
+          src="/college-banner.svg"
+          height="500"
+          class="w-full object-cover py-10"
+          alt="St. Joseph's College of Engineering"
+        />
+      </div><div
+        class="font-bold text-white text-lg text-center mx-6 md:text-[5rem]"
+        style="text-shadow: #b94e09 0px 0px 6px, #672307 0px 0px 6px;"
+      >
+        DEPARTMENT OF BIOTECHNOLOGY
+      </div><div class="my-4 md:mx-16">
+        <Image
+          src="/logo.jpg"
+          alt="logo"
+          class="w-full object-cover h-[200px]"
+          width={200}
+          height={200}
+		  
+        />
+      </div><div class="flex justify-center items-center gap-4">
+        <a
+          class="bg-[#b94e09] text-lg text-white font-semibold py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-transparent border border-[#672307] focus:outline-none focus:ring-2 focus:ring-[#4d81e3] focus:ring-opacity-50"
+          href="https://sympo.stjosephs-engg.cc">REGISTER</a
         >
-          <a href="/"><div class="h-[65px] w-[65px] bgGlow"></div></a>
-          <div
-            class="hidden md:block bg-[#b94f0937] text-white py-2 flex gap-6 rounded-2xl border-2 border-[#b94f0937]"
-          >
-            <a class="px-6 text-lg hover:text-gray-300" href="/">Home</a><a
-              class="px-6 text-lg hover:text-gray-300"
-              href="/transport">Transport</a
-            ><a class="px-6 text-lg hover:text-gray-300" href="/contact_us"
-              >Contacts</a
-            >
-          </div><div class="hidden md:block">
-            <a
-              class="bg-[#b94e09] rounded-tl-[16px] rounded-br-[16px] text-center text-lg text-white py-[8px] px-[12px] gap-8 w-full"
-              href="/register">REGISTER</a
-            >
-          </div><div class="block md:hidden">
-            <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
-              xmlns="http://www.w3.org/2000/svg"
-              ><line
-                x1="10"
-                y1="12"
-                x2="30"
-                y2="12"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"></line><line
-                x1="10"
-                y1="20"
-                x2="30"
-                y2="20"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"></line><line
-                x1="10"
-                y1="28"
-                x2="30"
-                y2="28"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="round"></line></svg
-            >
-          </div>
-        </div>
-      </div><div class="">
-        <div class="flex flex-col items-center">
-          <dialog class="backdrop:bg-black/60"></dialog><div
-            class="w-full md:w-6/12"
-          >
-            <img
-              src="/college-banner.svg"
-              height="500"
-              class="w-full object-cover py-10"
-			  alt="St. Joseph's College of Engineering"
-            />
-          </div><div
-            class="font-bold text-white text-lg text-center mx-6 md:text-[5rem]"
-            style="text-shadow: #b94e09 0px 0px 6px, #672307 0px 0px 6px;"
-          >
-            DEPARTMENT OF BIOTECHNOLOGY
-          </div><div class="my-4 md:mx-16">
-            <Image
-              src="/logo.jpg"
-              alt="logo"
-              class="w-full object-cover h-[200px]"
-			  width={200}
-			  height={200}
-            />
-          </div><div class="flex justify-center items-center gap-4">
-            <a
-              class="bg-[#b94e09] text-lg text-white font-semibold py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-transparent border border-[#672307] focus:outline-none focus:ring-2 focus:ring-[#4d81e3] focus:ring-opacity-50"
-              href="https://sympo.stjosephs-engg.cc">REGISTER</a
-            ><a
-              class="bg-[#b94e09] text-lg text-white font-semibold py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 rounded-lg shadow-md transition duration-300 ease-in-out hover:bg-transparent border border-[#672307] focus:outline-none focus:ring-2 focus:ring-[#4d81e3] focus:ring-opacity-50"
-              href="/events">VIEW EVENTS</a
-            >
-          </div><div class="flex justify-center text-white my-10 font-mono">
-            <Countdown client:only />
-          </div>
-        </div>
+      </div><div class="flex justify-center text-white my-10 font-mono">
+        <Countdown client:load />
+      </div><div
+	  	id="events"
+        class="font-bold text-white text-2xl m-6 md:text-[5rem]"
+        style="transform: translateX(0%); text-shadow: #b94e09 0px 0px 6px, #672307 0px 0px 6px;"
+      >
+        Events
       </div>
+	  <EventList client:load />
     </div>
-  </main>
+  </div>
 </Layout>
 <style is:global>
   body {
