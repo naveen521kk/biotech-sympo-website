@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
 import EventList from "../components/EventList";
-import logoImg from "../assets/logo.jpg";
 ---
 
 <Layout title="BIOVIZTA'2K24">
@@ -25,7 +24,7 @@ import logoImg from "../assets/logo.jpg";
         DEPARTMENT OF BIOTECHNOLOGY
       </div><div class="my-4 md:mx-16">
         <Image
-          src={logoImg}
+          src={"/logo.jpg"}
           alt="logo"
           class="w-full object-cover h-[200px]"
           width={200}
