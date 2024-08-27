@@ -19,28 +19,28 @@ const renderer = ({
     return (
       <>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             00
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Days</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Days</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             00
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Hours</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Hours</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             00
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Minutes</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Minutes</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             00
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Seconds</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Seconds</div>
         </div>
       </>
     );
@@ -49,28 +49,28 @@ const renderer = ({
     return (
       <>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             {days.toString().padStart(2, "0")}
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Days</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Days</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             {hours.toString().padStart(2, "0")}
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Hours</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Hours</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             {minutes.toString().padStart(2, "0")}
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Minutes</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Minutes</div>
         </div>
         <div className="flex flex-col items-center mx-2">
-          <div className="text-base md:text-6xl font-bold bg-orange-900 px-8 py-4 rounded-lg shadow-lg text-white">
+          <div className="text-base md:text-6xl font-bold bg-orange-900 px-4 md:px-8 py-4 rounded-lg shadow-lg text-white">
             {seconds.toString().padStart(2, "0")}
           </div>
-          <div className="mt-2 text-xl font-bold text-white">Seconds</div>
+          <div className="mt-2 md:text-xl font-bold text-white">Seconds</div>
         </div>
       </>
     );
@@ -88,15 +88,15 @@ export default function Countdown() {
       {isInteractive ? (
         <ReactCountdown date={new Date("2024-09-28")} renderer={renderer} />
       ) : (
-        <>{renderer(
-            {
-                days: 0,
-                hours: 0,
-                minutes: 0,
-                seconds: 0,
-                completed: true,
-            }
-        )}</>
+        <>
+          {renderer({
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0,
+            completed: true,
+          })}
+        </>
       )}
     </>
   );
