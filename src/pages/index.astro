@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Countdown from "../components/Countdown";
 import { Image } from "astro:assets";
 import EventList from "../components/EventList";
+import logoImg from "../assets/logo.jpg";
 ---
 
 <Layout title="BIOVIZTA'2K24">
@@ -12,7 +13,7 @@ import EventList from "../components/EventList";
         class="w-full md:w-6/12"
       >
         <img
-          src="/college-banner.svg"
+          src={"/college-banner.svg"}
           height="500"
           class="w-full object-cover py-10"
           alt="St. Joseph's College of Engineering"
@@ -24,12 +25,11 @@ import EventList from "../components/EventList";
         DEPARTMENT OF BIOTECHNOLOGY
       </div><div class="my-4 md:mx-16">
         <Image
-          src="/logo.jpg"
+          src={logoImg}
           alt="logo"
           class="w-full object-cover h-[200px]"
           width={200}
           height={200}
-		  
         />
       </div><div class="flex justify-center items-center gap-4">
         <a
@@ -39,13 +39,13 @@ import EventList from "../components/EventList";
       </div><div class="flex justify-center text-white my-10 font-mono">
         <Countdown client:load />
       </div><div
-	  	id="events"
+        id="events"
         class="font-bold text-white text-2xl m-6 md:text-[5rem]"
         style="transform: translateX(0%); text-shadow: #b94e09 0px 0px 6px, #672307 0px 0px 6px;"
       >
         Events
       </div>
-	  <EventList client:load />
+      <EventList client:load />
     </div>
   </div>
 </Layout>
