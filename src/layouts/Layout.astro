@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 import { getImage } from "astro:assets";
 import bioBackground from "../assets/bg.png";
 import { ViewTransitions } from "astro:transitions";
-
+import "@fontsource/jersey-10";
 interface Props {
   title: string;
 }
@@ -37,12 +37,7 @@ const bgImageSet = `image-set(${imageSet})`;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap"
-      rel="stylesheet"
-    />
+
     <ViewTransitions />
   </head>
   <body style=`background-image: ${bgImageSet};`>
