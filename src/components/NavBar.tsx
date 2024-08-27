@@ -6,7 +6,7 @@ export default function NavBar() {
     <>
       <div className="bg-black bg-opacity-50 md:bg-transparent w-screen flex flex-row justify-center p-5 h-[15%]">
         <div className="w-[80vw] flex flex-row justify-between items-center max-h-[60px]">
-          <a href="/">
+          <a href="/" aria-label="homepage">
             <div className="h-[65px] w-[65px] bgGlow"></div>
           </a>
           <div className="hidden md:block bg-[#b94f0937] text-white py-2 flex gap-6 rounded-2xl border-2 border-[#b94f0937]">

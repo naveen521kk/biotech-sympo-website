@@ -15,7 +15,7 @@ const EventCard = ({
   <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4">
     <div className="flex flex-col gap-2 p-4 bg-black bg-opacity-80 rounded-md border-2 border-stone-500 ">
       <div className="">
-        <img src={imgSrc} className="rounded-lg"/>
+        <img src={imgSrc} className="rounded-lg" alt={`BIOVIZTA'2K24 ${title} event logo`}/>
         <div className="text-sm mt-4 font-bold text-white text-center md:text-xl">
           {title}
         </div>
