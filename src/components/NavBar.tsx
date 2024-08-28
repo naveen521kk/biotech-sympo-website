@@ -4,7 +4,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false);
   return (
     <>
-      <div className="bg-black bg-opacity-50 md:bg-transparent w-screen flex flex-row justify-center p-5 h-[15%]">
+      <div className="bg-black bg-opacity-50 md:bg-transparent w-full flex flex-row justify-center p-5 h-[15%]">
         <div className="w-[80vw] flex flex-row justify-between items-center max-h-[60px]">
           <a href="/" aria-label="homepage">
             <div className="h-[65px] w-[65px] bgGlow"></div>
