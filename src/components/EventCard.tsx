@@ -15,18 +15,18 @@ const EventCard = ({
     <div className="flex flex-col gap-2 p-4 bg-black bg-opacity-80 rounded-md border-2 border-stone-500 ">
       <div className="">
         <div className="flex items-center justify-center">{imgComponent}</div>
-        <div className="text-sm mt-4 font-bold text-white text-center md:text-xl">
+        <div className="text-[1.5rem] h-[2em] mt-4 font-bold text-white text-center md:text-[1.5rem] font-mono leading-7">
           {title}
         </div>
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <button className="w-full mt-6 px-3.5 py-2  bg-[#b94e09] text-white rounded-2xl text-sm md:text-lg">
+            <button className="w-full mt-6 px-3.5 py-2  bg-[#b94e09] text-white rounded-2xl text-[1rem] md:text-lg">
               View more
             </button>
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay className="fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
-            <Dialog.Content className="font-serif fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-orange-900/90 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg">
+            <Dialog.Content className="font-kalam fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-orange-900/90 p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg">
               <Dialog.Title className="text-xl text-center font-semibold leading-none tracking-wider text-white">
                 {title}
               </Dialog.Title>

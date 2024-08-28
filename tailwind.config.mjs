@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Jersey 10"', "sans-serif"],
+        kalam: ["Kalam", "cursive"],
       },
       fontSize: {
         // lg should be 2rem - arrange the rest of the sizes accordingly
