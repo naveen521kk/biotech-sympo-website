@@ -22,10 +22,11 @@ export default function NavBar() {
           </div>
           <div className="hidden md:block">
             <a
-              className="bg-[#b94e09] rounded-tl-[16px] rounded-br-[16px] text-center text-lg text-white py-[8px] px-[12px] gap-8 w-full"
-              href="https://sympo.stjosephs-engg.cc/"
+              className="flex justify-center flex-row rounded-tl-[16px] rounded-br-[16px] text-center text-lg text-white py-[8px] px-[12px] gap-4 w-full"
+              href="https://www.instagram.com/biovizta"
             >
-              REGISTER
+              For updates
+              <img src="/insta-logo.svg" width="40" height="40" />
             </a>
           </div>
           <div className="block md:hidden">
@@ -95,10 +96,11 @@ export default function NavBar() {
               </a>
               <div className="mt-4">
                 <a
-                  className="bg-[#4d81e3] rounded-tl-[16px] rounded-br-[16px] text-center text-lg text-white py-[8px] px-[12px] gap-8 w-full"
-                  href="https://sympo.stjosephs-engg.cc/"
+                  className="flex justify-center flex-row rounded-tl-[16px] rounded-br-[16px] text-center text-lg text-white py-[8px] px-[12px] gap-4 w-full"
+                  href="https://www.instagram.com/biovizta"
                 >
-                  REGISTER
+                  For updates
+                  <img src="/insta-logo.svg" width="40" height="40" />
                 </a>
               </div>
             </div>
