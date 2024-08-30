@@ -46,6 +46,8 @@ import { Image } from "astro:assets";
       alt="BIOVIZTA'2K24 ARE WE ALONE event logo"
       class="rounded-lg"
       width={300}
+      quality={100}
+      densities={[1, 1.5, 2, 3, 4]}
     />
   </EventCard>
   <EventCard title="JUMANJI: INTO THE WILDERNESS" client:load>
@@ -88,6 +90,8 @@ import { Image } from "astro:assets";
       alt=`BIOVIZTA'2K24 JUMANJI: INTO THE WILDERNESS event logo`
       class="rounded-lg"
       width={300}
+      quality={100}
+      densities={[1, 1.5, 2, 3, 4]}
     />
   </EventCard>
   <EventCard title="CYTOKINE CRUSADERS" client:load>
@@ -139,6 +143,8 @@ import { Image } from "astro:assets";
       alt="BIOVIZTA'2K24 CYTOKINE CRUSADERS event logo"
       class="rounded-lg"
       width={300}
+      quality={100}
+      densities={[1, 1.5, 2, 3, 4]}
     />
   </EventCard>
   <EventCard title="AQUASHELLA SURFERS" client:load>
@@ -186,6 +192,8 @@ import { Image } from "astro:assets";
       alt="BIOVIZTA'2K24 AQUASHELLA SURFERS event logo"
       class="rounded-lg"
       width={300}
+      quality={100}
+      densities={[1, 1.5, 2, 3, 4]}
     />
   </EventCard>
   <EventCard title="EPICUREAN ENGINEERS" client:load>
@@ -238,14 +246,16 @@ import { Image } from "astro:assets";
         presented with a series of clever hints—each one offering a piece of the
         puzzle that leads to discovering the identity of a specific food or name
         of fruit.
-      </p></div>
-      <Image
-        slot="imgComponent"
-        src={epicureanSrc}
-        alt="BIOVIZTA'2K24 EPICUREAN ENGINEERS event logo"
-        class="rounded-lg"
-        width={300}
-      />
+      </p>
     </div>
+    <Image
+      slot="imgComponent"
+      src={epicureanSrc}
+      alt="BIOVIZTA'2K24 EPICUREAN ENGINEERS event logo"
+      class="rounded-lg"
+      width={300}
+      quality={100}
+      densities={[1, 1.5, 2, 3, 4]}
+    />
   </EventCard>
 </div>
